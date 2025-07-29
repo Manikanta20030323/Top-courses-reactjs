@@ -16,19 +16,19 @@ function Cards(props)
         // console.log(ans);
         return ans;
         }
-        else if(props.curFilter === "Development")
+        else if(props.curFilter == "Development")
         {
             return props.courses.Development;
         }
-        else if(props.curFilter === "Business")
+        else if(props.curFilter == "Business")
         {
             return props.courses.Business;
         }
-        else if(props.curFilter === "Design")
+        else if(props.curFilter == "Design")
         {
             return props.courses.Design;
         }
-        else if(props.curFilter === "Lifestyle")
+        else if(props.curFilter == "Lifestyle")
         {
             return props.courses.Lifestyle;
         }
