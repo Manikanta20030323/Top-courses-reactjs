@@ -6,6 +6,12 @@ import Cards from './Components/Cards'
 const App = () => {
 
   const [courses,setCources]= useState({});
+  const [curFilter, setCurFilter] = useState("All");
+
+  function handleFilterChange(filter){
+    setCurFilter(filter);
+  }
+
 const fetchData= async()=>{
       try{
         const data= await fetch(apiUrl);
@@ -32,10 +38,10 @@ const fetchData= async()=>{
       Top Courses
     </div>
     <div>
-      <Filter filterData={filterData}/>
+      <Filter filterData={filterData}  handleFilterChange={handleFilterChange}/>
     </div>
     <div className="Courses" >
-      <Cards courses={courses}/>
+      <Cards courses={courses} curFilter={curFilter}/>
     </div>
   </div>;
 };
